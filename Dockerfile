@@ -2,7 +2,7 @@ FROM node:20-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-COPY package.json package-lock.json ./
+COPY package.json ./
 
 # ใช้ npm install แทน npm ci เพื่อหลีกเลี่ยงปัญหาเกี่ยวกับไฟล์ lock
 RUN npm install
