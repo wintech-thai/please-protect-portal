@@ -68,17 +68,16 @@ const Navbar = () => {
           
           {/* Logo Section */}
           <div className="flex items-center gap-2">
+            
             <Link href={AppRoute.home} className="flex items-center gap-2 group shrink-0">
-              <div className="relative w-8 h-8 flex items-center justify-center bg-[#020617] rounded-lg border border-blue-900/50 p-0.5 group-hover:border-cyan-500/50 transition-colors">
                 <Image
                   src="/Devhub_logo.png"
                   alt="Logo"
-                  width={32}
-                  height={32}
+                  width={50}
+                  height={50}
                   className="w-full h-full object-contain"
                   priority
                 />
-              </div>
               <span className="text-2xl font-bold tracking-tight text-white hidden sm:block uppercase whitespace-nowrap">
                 PLEASE-PROTECT <span className="text-cyan-400">PORTAL</span>
               </span>
