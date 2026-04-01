@@ -71,11 +71,11 @@ const Navbar = () => {
             
             <Link href={AppRoute.home} className="flex items-center gap-2 group shrink-0">
                 <Image
-                  src="/Devhub_logo.png"
+                  src="/please-protect.svg"
                   alt="Logo"
                   width={50}
                   height={50}
-                  className="w-full h-full object-contain"
+                  className="object-contain"
                   priority
                 />
               <span className="text-2xl font-bold tracking-tight text-white hidden sm:block uppercase whitespace-nowrap">
