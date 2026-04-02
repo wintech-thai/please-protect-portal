@@ -17,7 +17,6 @@ const EcosystemFeatures = () => {
 
   return (
     <div className="w-full bg-[#0B1120] text-slate-300 py-20 relative z-10 border-t border-blue-900/20" id="value-prop">
-      
       {/* =========================================
          1. THE ECOSYSTEM OVERVIEW
       ========================================= */}

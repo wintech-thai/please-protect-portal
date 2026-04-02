@@ -70,7 +70,8 @@ const HeroSection = () => {
               </motion.button>
             </Link>
             
-            <Link href="#about" className="w-full sm:w-auto">
+            {/* 🚀 เปลี่ยน href จาก "#about" เป็น "/about" */}
+            <Link href="/about" className="w-full sm:w-auto">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
