@@ -3,6 +3,7 @@ import { Noto_Sans_Thai } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { PublicEnvScript } from "next-runtime-env";
+import { LanguageProvider } from "@/src/contexts/LanguageContext";
 
 const notoSansThai = Noto_Sans_Thai({
   variable: "--font-noto-sans-thai",
@@ -48,7 +49,9 @@ export default function RootLayout({
       <body
         className={`${notoSansThai.variable} antialiased`}
       >
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

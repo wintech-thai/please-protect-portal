@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import { ChevronDown, ArrowRight, ShieldCheck, Zap, LayoutDashboard, Network } from "lucide-react";
 import Link from "next/link";
+import { useLanguage } from "@/src/contexts/LanguageContext";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="w-full flex flex-col items-center relative overflow-hidden pb-12">
       
@@ -24,7 +27,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="px-4 py-1.5 rounded-full border border-blue-900/50 bg-blue-900/20 text-cyan-400 text-sm font-medium mb-2 shadow-[0_0_15px_rgba(34,211,238,0.1)]"
           >
-            Welcome to PLEASE-PROTECT Ecosystem
+            {t("hero.welcome")}
           </motion.div>
 
           {/* Main Title */}
@@ -34,9 +37,9 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white tracking-tight leading-tight"
           >
-            Comprehensive Security <br className="hidden md:block" />
+            {t("hero.title1")} <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-              for Modern Infrastructure
+              {t("hero.title2")}
             </span>
           </motion.h1>
 
@@ -47,8 +50,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-base md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed px-4 pt-2"
           >
-            ยกระดับความปลอดภัยให้ระบบของคุณด้วยแพลตฟอร์มที่รวมทุกการปกป้องไว้ในที่เดียว <br className="hidden md:block" />
-            รวดเร็ว แม่นยำ และสามารถบริหารจัดการทุกอย่างได้จากศูนย์กลาง
+            {t("hero.subtitle")}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -64,7 +66,7 @@ const HeroSection = () => {
                 whileTap={{ scale: 0.95 }}
                 className="w-full px-8 py-3.5 bg-cyan-500 hover:bg-cyan-400 text-[#0B1120] font-bold rounded-lg flex items-center justify-center gap-2 transition-all shadow-lg"
               >
-                ดูรายละเอียดผลิตภัณฑ์ <ArrowRight className="w-5 h-5" />
+                {t("hero.btn_product")} <ArrowRight className="w-5 h-5" />
               </motion.button>
             </Link>
             
@@ -74,7 +76,7 @@ const HeroSection = () => {
                 whileTap={{ scale: 0.95 }}
                 className="w-full px-8 py-3.5 bg-[#162032]/80 border border-blue-900/50 hover:border-cyan-500/50 text-white font-medium rounded-lg flex items-center justify-center transition-all shadow-lg"
               >
-                ทำไมต้อง PLEASE-PROTECT?
+                {t("hero.btn_why")}
               </motion.button>
             </Link>
           </motion.div>

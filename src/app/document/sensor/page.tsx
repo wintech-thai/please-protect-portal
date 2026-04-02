@@ -12,13 +12,16 @@ import {
 import Link from "next/link";
 import Navbar from "@/src/modules/home/components/nav-bar";
 import ParticlesHero from "@/src/modules/home/components/ParticleBackground";
+import { useLanguage } from "@/src/contexts/LanguageContext";
 
 export default function DocumentPage() {
+  const { t } = useLanguage();
+
   const documents = [
     {
       id: 1,
-      title: "Product Profile",
-      description: "รายละเอียดภาพรวมของผลิตภัณฑ์ หน้าที่การทำงาน และประโยชน์ที่องค์กรจะได้รับ",
+      title: t("document.doc1Title"),
+      description: t("document.doc1Desc"),
       type: "PDF",
       size: "2.4 MB",
       icon: BookOpen,
@@ -26,8 +29,8 @@ export default function DocumentPage() {
     },
     {
       id: 2,
-      title: "Product Specification",
-      description: "ข้อมูลทางเทคนิค รุ่นต่างๆ ของผลิตภัณฑ์ และรายละเอียดสเปคอย่างละเอียด (Hardware/Software)",
+      title: t("document.doc2Title"),
+      description: t("document.doc2Desc"),
       type: "PDF",
       size: "1.8 MB",
       icon: FileCheck,
@@ -54,7 +57,7 @@ export default function DocumentPage() {
               className="flex items-center gap-2 text-cyan-500 text-sm font-medium mb-4 cursor-pointer hover:text-cyan-400 transition-colors"
             >
               <Link href="/product/sensor" className="flex items-center gap-2">
-                <ArrowLeft className="w-4 h-4" /> Back to Product
+                <ArrowLeft className="w-4 h-4" /> {t("document.backToProduct")}
               </Link>
             </motion.div>
             
@@ -71,7 +74,7 @@ export default function DocumentPage() {
               transition={{ delay: 0.1 }}
               className="text-slate-400 text-lg"
             >
-              ศูนย์รวมเอกสารและข้อมูลทางเทคนิคสำหรับระบบเซ็นเซอร์ตรวจจับภัยคุกคาม
+              {t("document.subtitle")}
             </motion.p>
           </div>
 
@@ -106,7 +109,7 @@ export default function DocumentPage() {
                       </p>
                       
                       <button className="inline-flex items-center gap-2 px-6 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold rounded-lg transition-all shadow-lg active:scale-95">
-                        <Download className="w-4 h-4" /> Download <span className="opacity-60 font-normal">({doc.size})</span>
+                        <Download className="w-4 h-4" /> {t("document.download")} <span className="opacity-60 font-normal">({doc.size})</span>
                       </button>
                     </div>
                   </div>
@@ -118,11 +121,11 @@ export default function DocumentPage() {
                          <QrCode className="w-20 h-20 text-[#0B1120]" />
                       </div>
                       <div className="absolute inset-0 bg-[#0B1120]/90 opacity-0 group-hover/qr:opacity-100 transition-opacity flex items-center justify-center rounded-xl">
-                        <p className="text-[10px] font-bold text-cyan-400">SCAN TO OPEN</p>
+                        <p className="text-[10px] font-bold text-cyan-400">{t("document.scanToOpen")}</p>
                       </div>
                     </div>
                     <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">
-                      Scan to Mobile
+                      {t("document.scanToMobile")}
                     </p>
                   </div>
 
@@ -139,9 +142,9 @@ export default function DocumentPage() {
             className="mt-12 p-8 rounded-2xl border border-dashed border-blue-900/50 text-center bg-blue-900/5"
           >
             <p className="text-slate-500 text-sm">
-              ต้องการข้อมูลด้านเทคนิคเชิงลึกเพิ่มเติม? 
+              {t("document.needMoreInfo")}{" "}
               <Link href="/about" className="text-cyan-500 hover:text-cyan-400 font-semibold ml-1 transition-colors">
-                ติดต่อทีมวิศวกรของเรา
+                {t("document.contactEngineer")}
               </Link>
             </p>
           </motion.div>

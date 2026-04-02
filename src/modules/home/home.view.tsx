@@ -4,6 +4,7 @@ import Navbar from "@/src/modules/home/components/nav-bar";
 import HeroSection from "./components/hero-section"; 
 import ParticlesHero from "./components/ParticleBackground";
 import EcosystemFeatures from "./components/ecosystem-features";
+import Footer from "./components/footer";
 
 export const HomeView = () => {
   return (
@@ -17,6 +18,7 @@ export const HomeView = () => {
         <HeroSection />
         <EcosystemFeatures />
       </main>
+      <Footer />
       
     </div>
   );

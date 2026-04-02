@@ -6,40 +6,40 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AppRoute } from "@/src/config/app.route"; 
+import { useLanguage } from "@/src/contexts/LanguageContext";
 
 const Navbar = () => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
-  const [language, setLanguage] = useState<"TH" | "EN">("EN");
+  
+  const { language, setLanguage, t } = useLanguage();
 
   const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const langDropdownRef = useRef<HTMLDivElement>(null);
 
   const navLinks = [
     {
-      name: "Product",
+      name: t("navbar.product"),
       isDropdown: true,
       children: [
         { name: "PLEASE-PROTECT SENSOR", link: AppRoute.productSensor }
       ]
     },
     {
-      name: "Document",
+      name: t("navbar.document"),
       isDropdown: true,
       children: [
         { name: "PLEASE-PROTECT SENSOR", link: AppRoute.documentSensor }
       ]
     },
-
     {
-      name: "About Us",
+      name: t("navbar.about"),
       link: AppRoute.about,
     },
-
     {
-      name: "Security & Privacy",
+      name: t("navbar.security"),
       link: AppRoute.privacy,
     },
   ];
@@ -68,7 +68,6 @@ const Navbar = () => {
           
           {/* Logo Section */}
           <div className="flex items-center gap-2">
-            
             <Link href={AppRoute.home} className="flex items-center gap-2 group shrink-0">
                 <Image
                   src="/please-protect.svg"
@@ -79,7 +78,7 @@ const Navbar = () => {
                   priority
                 />
               <span className="text-2xl font-bold tracking-tight text-white hidden sm:block uppercase whitespace-nowrap">
-                PLEASE-PROTECT <span className="text-cyan-400">PORTAL</span>
+                PLEASE-<span className="text-cyan-400">PROTECT</span>
               </span>
             </Link>
           </div>
@@ -196,7 +195,7 @@ const Navbar = () => {
             ))}
             
             <div className="p-4 bg-[#020617]/50 border-b border-blue-900/30">
-              <p className="text-xs font-semibold text-slate-500 mb-2 uppercase tracking-wider">Language</p>
+              <p className="text-xs font-semibold text-slate-500 mb-2 uppercase tracking-wider">{t("navbar.language")}</p>
               <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={() => { setLanguage("EN"); setIsMobileMenuOpen(false); }}

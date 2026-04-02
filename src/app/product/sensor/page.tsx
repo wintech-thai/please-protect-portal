@@ -7,23 +7,26 @@ import Link from "next/link";
 import Image from "next/image"; 
 import Navbar from "@/src/modules/home/components/nav-bar";
 import ParticlesHero from "@/src/modules/home/components/ParticleBackground";
+import { useLanguage } from "@/src/contexts/LanguageContext";
 
 export default function ProductSensorPage() {
+  const { t } = useLanguage();
+
   const features = [
     {
       icon: Zap,
-      title: "ติดตั้งง่าย พร้อมใช้งานทันที",
-      desc: "ออกแบบมาให้ลดความซับซ้อนในการติดตั้ง สามารถ Deploy และพร้อมเริ่มตรวจจับภัยคุกคามในระบบได้ในเวลาอันรวดเร็ว",
+      title: t("product.feat1Title"),
+      desc: t("product.feat1Desc"),
     },
     {
       icon: Cloud,
-      title: "รองรับ Cloud & On-Premise",
-      desc: "ยืดหยุ่นต่อทุกสถาปัตยกรรมขององค์กร ไม่ว่าระบบของคุณจะอยู่บนคลาวด์ หรือเป็นเซิร์ฟเวอร์ภายในองค์กร (On-Premise) ก็ทำงานได้อย่างไร้รอยต่อ",
+      title: t("product.feat2Title"),
+      desc: t("product.feat2Desc"),
     },
     {
       icon: Activity,
-      title: "ประสิทธิภาพสูง (10,000+ Events/sec)",
-      desc: "สถาปัตยกรรมรองรับการรับส่งและประมวลผลข้อมูลมหาศาลได้อย่างมีประสิทธิภาพ มั่นใจได้ว่าไม่มี Log หรือ Event ใดเล็ดลอดสายตา",
+      title: t("product.feat3Title"),
+      desc: t("product.feat3Desc"),
     },
   ];
 
@@ -47,7 +50,7 @@ export default function ProductSensorPage() {
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-500/50 bg-cyan-500/10 text-cyan-400 text-sm font-semibold mb-6"
             >
               <Activity className="w-4 h-4" />
-              <span>Core Product</span>
+              <span>{t("product.coreBadge")}</span>
             </motion.div>
             
             <motion.h1 
@@ -56,7 +59,7 @@ export default function ProductSensorPage() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight mb-6"
             >
-              PLEASE-PROTECT <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">SENSOR</span>
+              {t("product.title")} <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">{t("product.sensor")}</span>
             </motion.h1>
             
             <motion.p 
@@ -65,8 +68,7 @@ export default function ProductSensorPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg text-slate-400 leading-relaxed"
             >
-              หัวใจสำคัญของการตรวจจับและปกป้องระบบเครือข่าย ทำหน้าที่เปรียบเสมือนดวงตา
-              ที่คอยเฝ้าระวังทุกความเคลื่อนไหว เพื่อความปลอดภัยสูงสุดขององค์กรคุณ
+              {t("product.subtitle")}
             </motion.p>
           </div>
 
@@ -89,7 +91,7 @@ export default function ProductSensorPage() {
                 </p>
                 <ul className="mt-6 space-y-2">
                   <li className="flex items-center gap-2 text-sm text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-500" /> ตอบโจทย์การใช้งานจริง
+                    <CheckCircle2 className="w-4 h-4 text-cyan-500" /> {t("product.practicalUse")}
                   </li>
                 </ul>
               </motion.div>
@@ -105,12 +107,12 @@ export default function ProductSensorPage() {
           >
             <div className="flex flex-col md:flex-row justify-between items-end mb-6 gap-4 px-2">
               <div>
-                <h2 className="text-2xl font-bold text-white mb-2">Intuitive Dashboard</h2>
-                <p className="text-slate-400 text-sm">หน้าจอแสดงผลการทำงานแบบ Real-time เข้าใจง่าย</p>
+                <h2 className="text-2xl font-bold text-white mb-2">{t("product.dashboardTitle")}</h2>
+                <p className="text-slate-400 text-sm">{t("product.dashboardDesc")}</p>
               </div>
               <Link href="/document/sensor">
                 <button className="flex items-center gap-2 px-6 py-2.5 bg-[#162032] border border-blue-900/50 hover:border-cyan-500/50 text-white font-medium rounded-lg transition-all shadow-lg">
-                  <FileText className="w-4 h-4 text-cyan-400" /> ดูเอกสารสเปค (Spec)
+                  <FileText className="w-4 h-4 text-cyan-400" /> {t("product.specBtn")}
                 </button>
               </Link>
             </div>
