@@ -10,7 +10,6 @@ const HeroSection = () => {
 
   return (
     <section className="w-full flex flex-col items-center relative overflow-hidden pb-12">
-      
       {/* 1. Hero Content */}
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center min-h-[70vh] relative z-10">
         
@@ -70,7 +69,6 @@ const HeroSection = () => {
               </motion.button>
             </Link>
             
-            {/* 🚀 เปลี่ยน href จาก "#about" เป็น "/about" */}
             <Link href="/about" className="w-full sm:w-auto">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -89,7 +87,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
-          className="absolute bottom-4 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-1 left-1/2 transform -translate-x-1/2"
         >
           <motion.div
             animate={{ y: [0, 10, 0] }}
