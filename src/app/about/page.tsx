@@ -5,11 +5,9 @@ import { motion } from "framer-motion";
 import { Shield, Target, Users, Zap, Code, Globe2 } from "lucide-react";
 import Navbar from "@/src/modules/home/components/nav-bar";
 import ParticlesHero from "@/src/modules/home/components/ParticleBackground";
-// 🚀 1. Import useLanguage
 import { useLanguage } from "@/src/contexts/LanguageContext";
 
 export default function AboutPage() {
-  // 🚀 2. ดึงฟังก์ชันแปลภาษามาใช้
   const { t } = useLanguage();
 
   const expertiseList = [
