@@ -6,6 +6,7 @@ import { Shield, Target, Users, Zap, Code, Globe2 } from "lucide-react";
 import Navbar from "@/src/modules/home/components/nav-bar";
 import ParticlesHero from "@/src/modules/home/components/ParticleBackground";
 import { useLanguage } from "@/src/contexts/LanguageContext";
+import Footer from "@/src/modules/home/components/footer";
 
 export default function AboutPage() {
   const { t } = useLanguage();
@@ -158,6 +159,7 @@ export default function AboutPage() {
 
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

@@ -8,6 +8,7 @@ import Image from "next/image";
 import Navbar from "@/src/modules/home/components/nav-bar";
 import ParticlesHero from "@/src/modules/home/components/ParticleBackground";
 import { useLanguage } from "@/src/contexts/LanguageContext";
+import Footer from "@/src/modules/home/components/footer";
 
 export default function ProductSensorPage() {
   const { t } = useLanguage();
@@ -138,9 +139,11 @@ export default function ProductSensorPage() {
 
             </div>
           </motion.div>
+          
 
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
