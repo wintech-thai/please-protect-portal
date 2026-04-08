@@ -29,7 +29,7 @@ const EcosystemFeatures = () => {
             className="text-3xl md:text-4xl font-bold text-white mb-4"
           >
             {t("ecosystem.overviewTitle").replace("PLEASE-PROTECT", "")} 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">PLEASE-PROTECT</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"> PLEASE-PROTECT</span>
             {t("ecosystem.overviewTitle").includes("Ecosystem") ? "" : " Ecosystem"}
           </motion.h2>
           <motion.p 

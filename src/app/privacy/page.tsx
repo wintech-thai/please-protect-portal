@@ -13,6 +13,7 @@ import {
 import Navbar from "@/src/modules/home/components/nav-bar";
 import ParticlesHero from "@/src/modules/home/components/ParticleBackground";
 import { useLanguage } from "@/src/contexts/LanguageContext";
+import Footer from "@/src/modules/home/components/footer";
 
 export default function SecurityPrivacyPage() {
   const { t } = useLanguage();
@@ -164,12 +165,13 @@ export default function SecurityPrivacyPage() {
           >
             <p className="text-slate-500 text-sm">
               {t("privacy.footerQ")} <br className="hidden sm:block" />
-              {t("privacy.footerContact")} <a href="mailto:security@please-protect.com" className="text-cyan-500 hover:text-cyan-400 underline underline-offset-4 font-medium transition-colors">security@please-protect.com</a>
+              {t("privacy.footerContact")} <a href="mailto:seubpong.mon@dev-hubs.com" className="text-cyan-500 hover:text-cyan-400 underline underline-offset-4 font-medium transition-colors">seubpong.mon@dev-hubs.com</a>
             </p>
           </motion.div>
 
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
