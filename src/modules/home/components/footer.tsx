@@ -15,10 +15,10 @@ const Footer = () => {
       name: t("navbar.about"), 
       link: AppRoute.home + '#about',
     },
-    {
-      name: t("footer.services"),
-      link: AppRoute.home + '#services',
-    },
+    // {
+    //   name: t("footer.services"),
+    //   link: AppRoute.home + '#services',
+    // },
     {
       name: t("navbar.security"), 
       link: AppRoute.privacy,
@@ -31,6 +31,7 @@ const Footer = () => {
     { icon: MapPin, text: 'Dev Hub Co., Ltd. 55 Sutthisan Winitchai Road, Din Daeng Subdistrict, Din Daeng District, Bangkok 10400, Thailand', href: '#' },
   ];
 
+  /*
   const services = [
     "Container Orchestration",
     "Custom Software Development",
@@ -38,11 +39,12 @@ const Footer = () => {
     "DevOps Engineering",
     "Cloud Infrastructure"
   ];
+  */
 
   return (
     <footer className="relative bg-[#0B1120] border-t border-blue-900/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           
           {/* Company Info */}
           <motion.div
@@ -50,7 +52,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-6 lg:pr-8" 
           >
             <Link href="/">
               <Image
@@ -66,8 +68,7 @@ const Footer = () => {
             </p>
           </motion.div>
 
-          {/* Services */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -87,6 +88,7 @@ const Footer = () => {
               ))}
             </ul>
           </motion.div>
+          */}
 
           {/* Quick Links */}
           <motion.div
