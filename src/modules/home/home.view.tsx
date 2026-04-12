@@ -5,6 +5,7 @@ import HeroSection from "./components/hero-section";
 import ParticlesHero from "./components/ParticleBackground";
 import EcosystemFeatures from "./components/ecosystem-features";
 import Footer from "./components/footer";
+import { NetworkDiagram } from "./components/diagram";
 
 export const HomeView = () => {
   return (
@@ -17,6 +18,7 @@ export const HomeView = () => {
       <main className="relative z-10 w-full overflow-x-hidden pt-16">
         <HeroSection />
         <EcosystemFeatures />
+        <NetworkDiagram />
       </main>
       <Footer />
       
