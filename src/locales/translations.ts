@@ -271,6 +271,50 @@ export const portalTranslations = {
       footerQ: "มีข้อสงสัยเกี่ยวกับนโยบายความเป็นส่วนตัวหรือต้องการรายงานปัญหาด้านความปลอดภัย?",
       footerContact: "กรุณาติดต่อ "
     }
+  },
+  diagram: {
+    EN: {
+      headerTitle: "Sensor Deployment Architecture",
+      headerSubtitle: "Passive Out-of-Band Monitoring Flow",
+      statusOnline: "Online",
+      statusOffline: "Offline",
+      statusWarning: "Warning",
+      nodeInternet: "Internet",
+      nodeWan: "WAN Traffic",
+      nodeFirewall: "Firewall",
+      nodeGateway: "Security Gateway",
+      nodeCoreSwitch: "Core Switch",
+      nodeDistribution: "Central Distribution",
+      nodeMirror: "SPAN / Mirror Port",
+      nodeSensor: "PROTECT SENSOR",
+      nodeInternal: "Internal LAN",
+      nodeInternalSubtitle: "Enterprise Infrastructure",
+      descPassiveTitle: "Passive Observation",
+      descPassiveBody: "Traffic is cloned via SPAN port. Zero impact on network performance.",
+      descProtectTitle: "Protected Network",
+      descProtectBody: "Monitoring internal network traffic securely without interruptions."
+    },
+    TH: {
+      headerTitle: "สถาปัตยกรรมการติดตั้งเซ็นเซอร์",
+      headerSubtitle: "รูปแบบการตรวจสอบแบบ Passive Out-of-Band",
+      statusOnline: "ออนไลน์",
+      statusOffline: "ออฟไลน์",
+      statusWarning: "แจ้งเตือน",
+      nodeInternet: "อินเทอร์เน็ต",
+      nodeWan: "เครือข่ายภายนอก (WAN)",
+      nodeFirewall: "ไฟร์วอลล์",
+      nodeGateway: "ระบบรักษาความปลอดภัย",
+      nodeCoreSwitch: "สวิตช์เครือข่ายหลัก",
+      nodeDistribution: "ศูนย์กลางการกระจายข้อมูล",
+      nodeMirror: "พอร์ต SPAN / Mirror",
+      nodeSensor: "PROTECT SENSOR",
+      nodeInternal: "เครือข่ายภายใน (LAN)",
+      nodeInternalSubtitle: "เครือข่ายภายในองค์กร",
+      descPassiveTitle: "การสังเกตการณ์แบบพาสซีฟ",
+      descPassiveBody: "คัดลอกข้อมูลผ่านพอร์ต SPAN โดยไม่มีผลกระทบต่อประสิทธิภาพของเครือข่ายหลัก",
+      descProtectTitle: "เครือข่ายที่ได้รับการปกป้อง",
+      descProtectBody: "เฝ้าระวังและปกป้องข้อมูลในเครือข่ายภายในองค์กรอย่างปลอดภัยไร้รอยต่อ"
+    }
   }
 
   
