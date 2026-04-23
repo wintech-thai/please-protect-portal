@@ -128,8 +128,16 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Right Section (Language) */}
+          {/* Right Section (Login + Language) */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            <a
+              href="https://center.please-protect.com/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:flex items-center px-4 py-1.5 text-xs font-semibold rounded-full border border-cyan-500/60 text-cyan-400 hover:bg-cyan-500/10 transition-all duration-200 whitespace-nowrap"
+            >
+              {t("navbar.login")}
+            </a>
             <div className="relative hidden sm:block" ref={langDropdownRef}>
               <button
                 onClick={() => setIsLangDropdownOpen(!isLangDropdownOpen)}
@@ -194,6 +202,17 @@ const Navbar = () => {
               </div>
             ))}
             
+            <div className="p-4 border-b border-blue-900/30">
+              <a
+                href="https://center.please-protect.com/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-full py-3 text-sm font-semibold rounded-md border border-cyan-500/60 text-cyan-400 hover:bg-cyan-500/10 transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t("navbar.login")}
+              </a>
+            </div>
             <div className="p-4 bg-[#020617]/50 border-b border-blue-900/30">
               <p className="text-xs font-semibold text-slate-500 mb-2 uppercase tracking-wider">{t("navbar.language")}</p>
               <div className="grid grid-cols-2 gap-2">

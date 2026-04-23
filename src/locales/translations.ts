@@ -6,6 +6,7 @@ export const portalTranslations = {
       security: "Security & Privacy",
       about: "About Us",
       language: "Language",
+      login: "Login",
     },
     TH: {
       product: "ผลิตภัณฑ์",
@@ -13,6 +14,7 @@ export const portalTranslations = {
       security: "ความปลอดภัยและข้อมูลส่วนตัว",
       about: "เกี่ยวกับเรา",
       language: "ภาษา",
+      login: "เข้าสู่ระบบ",
     }
   },
 
@@ -230,7 +232,7 @@ export const portalTranslations = {
       prin2Title: "Data Privacy by Design",
       prin2Desc: "The system is designed with privacy at its core. We only access data necessary for threat analysis.",
       prin3Title: "Strict Access Control",
-      prin3Desc: "Data access is controlled by strict Role-Based Access Control (RBAC) and mandatory Multi-Factor Authentication (MFA).",
+      prin3Desc: "Data access is controlled by strict Role-Based Access Control (RBAC)",
       
       handleDataTitle: "How do we handle your data?",
       pol1Title: "1. Data Collection",
@@ -256,7 +258,7 @@ export const portalTranslations = {
       prin2Title: "Data Privacy by Design",
       prin2Desc: "ระบบถูกออกแบบโดยยึดหลักความเป็นส่วนตัวเป็นที่ตั้ง เราเข้าถึงข้อมูลเท่าที่จำเป็นต่อการวิเคราะห์ภัยคุกคามเท่านั้น",
       prin3Title: "Strict Access Control",
-      prin3Desc: "ควบคุมการเข้าถึงข้อมูลด้วยระบบ Role-Based Access Control (RBAC) ที่เข้มงวด และบังคับใช้ Multi-Factor Authentication (MFA)",
+      prin3Desc: "ควบคุมการเข้าถึงข้อมูลด้วยระบบ Role-Based Access Control (RBAC) ที่เข้มงวด",
       
       handleDataTitle: "เราจัดการข้อมูลของคุณอย่างไร?",
       pol1Title: "1. การเก็บรวบรวมข้อมูล (Data Collection)",
@@ -272,6 +274,41 @@ export const portalTranslations = {
       footerContact: "กรุณาติดต่อ "
     }
   },
+  centerDiagram: {
+    EN: {
+      headerTitle: "Sensor–Center Integration Architecture",
+      headerSubtitle: "Cloud-Connected Threat Intelligence Flow",
+      nodeSensor: "PLEASE-PROTECT SENSOR",
+      nodeSensorSub: "On-Premise",
+      nodeCenter: "PLEASE-PROTECT CENTER",
+      nodeCenterSub: "Cloud",
+      labelUpload: "Threat Aggregate Data",
+      labelDownload: "Threat Intel & Alert Rules",
+      dashboardBadge: "Analytic Dashboard",
+      dashboardDesc: "Centralised visibility — real-time threat overview across all sensors",
+      descUploadTitle: "Threat Data Aggregation",
+      descUploadBody: "The sensor continuously forwards collected threat events and network anomalies to the CENTER for unified analysis.",
+      descDownloadTitle: "Threat Intel & Rules Sync",
+      descDownloadBody: "The CENTER pushes the latest threat intelligence and alert rules back to every sensor, keeping detection always up-to-date.",
+    },
+    TH: {
+      headerTitle: "สถาปัตยกรรมการเชื่อมต่อ Sensor–Center",
+      headerSubtitle: "การไหลของข้อมูลภัยคุกคามผ่านระบบคลาวด์",
+      nodeSensor: "PLEASE-PROTECT SENSOR",
+      nodeSensorSub: "ติดตั้งภายในองค์กร",
+      nodeCenter: "PLEASE-PROTECT CENTER",
+      nodeCenterSub: "Cloud",
+      labelUpload: "ข้อมูลภัยคุกคามรวม",
+      labelDownload: "Threat Intel & Alert Rules",
+      dashboardBadge: "Analytic Dashboard",
+      dashboardDesc: "มุมมองรวมแบบ Real-time — แสดงภาพรวมภัยคุกคามจากทุก Sensor",
+      descUploadTitle: "การรวบรวมข้อมูลภัยคุกคาม",
+      descUploadBody: "Sensor ส่งข้อมูล Threat Events และความผิดปกติของเครือข่ายไปยัง CENTER เพื่อวิเคราะห์รวมศูนย์อย่างต่อเนื่อง",
+      descDownloadTitle: "ซิงค์ Threat Intel & Rules",
+      descDownloadBody: "CENTER ส่ง Threat Intelligence และ Alert Rules ล่าสุดกลับไปยังทุก Sensor เพื่อให้การตรวจจับทันสมัยอยู่เสมอ",
+    }
+  },
+
   diagram: {
     EN: {
       headerTitle: "Sensor Deployment Architecture",
