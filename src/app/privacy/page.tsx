@@ -165,7 +165,7 @@ export default function SecurityPrivacyPage() {
           >
             <p className="text-slate-500 text-sm">
               {t("privacy.footerQ")} <br className="hidden sm:block" />
-              {t("privacy.footerContact")} <a href="mailto:seubpong.mon@dev-hubs.com" className="text-cyan-500 hover:text-cyan-400 underline underline-offset-4 font-medium transition-colors">seubpong.mon@dev-hubs.com</a>
+              {t("privacy.footerContact")} <a href="mailto:contact@dev-hubs.com" className="text-cyan-500 hover:text-cyan-400 underline underline-offset-4 font-medium transition-colors">contact@dev-hubs.com</a>
             </p>
           </motion.div>
 

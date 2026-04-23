@@ -26,9 +26,9 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: Mail, text: 'seubpong.mon@dev-hubs.com', href: 'mailto:seubpong.mon@dev-hubs.com' },
+    { icon: Mail, text: 'contact@dev-hubs.com', href: 'mailto:contact@dev-hubs.com' },
     { icon: Phone, text: '66(0) 94-249-4880', href: 'tel:+66942494880' },
-    { icon: MapPin, text: 'Dev Hub Co., Ltd. 55 Sutthisan Winitchai Road, Din Daeng Subdistrict, Din Daeng District, Bangkok 10400, Thailand', href: '#' },
+    { icon: MapPin, text: 'Dev Hub Co., Ltd.', subtext: '55 Sutthisan Winitchai Road, Din Daeng Subdistrict, Din Daeng District, Bangkok 10400, Thailand', href: '#' },
   ];
 
   /*
@@ -134,7 +134,15 @@ const Footer = () => {
                     className="flex items-start space-x-3 text-slate-400 hover:text-cyan-400 transition-colors group"
                   >
                     <IconComponent size={18} className="text-slate-500 group-hover:text-cyan-400 flex-shrink-0 mt-0.5 transition-colors" />
-                    <span className="text-sm leading-relaxed">{contact.text}</span>
+                    <span className="text-sm leading-relaxed">
+                      {contact.text}
+                      {'subtext' in contact && (
+                        <>
+                          <br />
+                          {(contact as { subtext: string }).subtext}
+                        </>
+                      )}
+                    </span>
                   </motion.a>
                 );
               })}

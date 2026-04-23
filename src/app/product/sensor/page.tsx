@@ -8,7 +8,7 @@ import Image from "next/image";
 import Navbar from "@/src/modules/home/components/nav-bar";
 import ParticlesHero from "@/src/modules/home/components/ParticleBackground";
 import { useLanguage } from "@/src/contexts/LanguageContext";
-import { NetworkDiagram } from "@/src/modules/home/components/diagram";
+import { NetworkDiagram, CenterDiagram } from "@/src/modules/home/components/diagram";
 import Footer from "@/src/modules/home/components/footer";
 
 export default function ProductSensorPage() {
@@ -42,6 +42,7 @@ export default function ProductSensorPage() {
 
       <main className="relative z-10 w-full pt-28 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <CenterDiagram />
           <NetworkDiagram />
           
           {/* 1. Header Section */}
