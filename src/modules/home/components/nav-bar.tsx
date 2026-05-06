@@ -131,7 +131,7 @@ const Navbar = () => {
           {/* Right Section (Login + Language) */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             <a
-              href="https://center.please-protect.com/login"
+              href="https://web.center.please-protect.com"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:flex items-center px-4 py-1.5 text-xs font-semibold rounded-full border border-cyan-500/60 text-cyan-400 hover:bg-cyan-500/10 transition-all duration-200 whitespace-nowrap"
